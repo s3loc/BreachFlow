@@ -15,7 +15,7 @@ Clone the repository using the following command:
 
 bash
 
-git clone https://github.com/s3loc/BreachFlow.git
+gh repo clone s3loc/BreachFlow
 
 Usage
 
@@ -43,8 +43,8 @@ Kurulum
 Depoyu şu komut ile klonlayın:
 
 bash
-
-git clone https://github.com/s3loc/BreachFlow.git
+ 
+gh repo clone s3loc/BreachFlow
 
 Kullanım
 
